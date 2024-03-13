@@ -138,8 +138,7 @@ mod BraavosResolverDelegation {
             assert(is_open, 'Registration is closed');
 
             // Check if receiver is a braavos wallet
-            let caller = get_caller_address();
-            self._check_braavos_account(caller);
+            self._check_braavos_account(address);
 
             // Check if name is not taken
             let owner = self._name_owners.read(name);
@@ -171,8 +170,7 @@ mod BraavosResolverDelegation {
             assert(owner == caller, 'caller is not owner');
 
             // Check if new owner is a braavos wallet
-            let caller = get_caller_address();
-            self._check_braavos_account(caller);
+            self._check_braavos_account(new_owner);
 
             // Change address in storage
             self._name_owners.write(name, new_owner);
