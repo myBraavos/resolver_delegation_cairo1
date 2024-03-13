@@ -16,17 +16,17 @@ Reach out to [Fricoben](https://twitter.com/fricoben) or [Th0rgal](https://twitt
 
 ### Compile Contracts with Scarb
 
-Ensure you're using version `0.6.0-alpha.2` of Scarb. To install this version of Scarb run the command:
+Ensure you're using version `2.3.1` of Scarb. To install this version of Scarb run the command:
 
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh -s -- -v 0.6.0-alpha.2
+curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh -s -- -v 2.3.1
 ```
 
 Ensure your Scarb.toml file contains these settings:
 
 ```
 [dependencies]
-starknet = "2.1.0-rc2"
+starknet = "2.3.1"
 
 [[target.starknet-contract]]
 # Enable Sierra codegen.
